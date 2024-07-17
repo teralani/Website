@@ -1,0 +1,329 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" 
+          content= "width=device-width, 
+                    initial-scale=1.0" /> 
+        <meta charset="UTF-8" />
+        <script defer src="app.js"></script>
+        <!-- Website Name-->
+        <title> iPad Pro - Aniketh :) </title>
+        <!-- Favicon -->
+        <link rel = "icon" href="https://i.kym-cdn.com/photos/images/newsfeed/002/486/154/c06.gif">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+            body {
+                display: absolute;
+                overflow-x: clip;
+                background: rgb(249, 121, 121);
+                margin:0;
+                
+            }
+            #titleheader{
+                color: rgb(245,245,247);
+                font-family: Inter, sans-serif;
+                font-size: 4.5vw;
+                text-align: center;
+                margin-bottom: 0;
+
+                animation-name: fadeAndScaleIn;
+                animation-duration: 2.6s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+                animation-delay: 2s;
+
+                transform-origin: center bottom;
+            }
+            #gradient {
+                margin: 0;
+                font-size: 4.5vw;
+                font-family: Inter, sans-serif;
+                background: linear-gradient(rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1)), linear-gradient(to right, #ee5b0c,#eeec72, #0665d1, #4493ee);
+                -webkit-text-fill-color: transparent; 
+                -webkit-background-clip: text; 
+
+                animation-name: fadeAndScaleIn;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+                animation-delay: 2.7s;
+
+                transform-origin: center top;
+            }
+            @keyframes fadeAndScaleIn {
+                0% {transform: scale3d(.9, .9, 1); opacity: 0;}
+                80% {opacity: 0.6;}
+                100% {transform: scale3d(1, 1, 1); opacity: 1;}
+            }
+            .title {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                overflow: auto;
+                flex-direction: column;
+                z-index: 1;
+                top: 27vh;
+            }
+            #navbar {
+                top: 0;
+                width: 100%;
+                height: 4vh;
+                background-color: rgb(0, 0, 0);
+                z-index: 1000000000;
+            }
+            @keyframes stickyNav{
+                100%{}
+            }
+            .nav-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                justify-content: center;
+                
+                font-size: clamp(0rem, 1vw, 2rem);
+                font-family: Inter, sans-serif;
+                color: rgb(245,245,247);
+                text-decoration: none;
+                
+                display: flex;
+                gap: clamp(0.5rem, 7vw, 2.3rem);
+            }
+            .nav-list, a {
+                text-decoration: none;
+                color: rgb(245,245,247);
+                font-weight: 200;
+                font-size: 0.7rem;
+                text-wrap: nowrap;
+
+            }
+            #nav__wrapper {
+                padding-inline: 20% 20%;
+                padding-top: 1vh;
+                justify-content: center;
+            }
+            #section1 {
+                background: rgb(0,0,0);
+                height: 110vh;
+                width: 100vw;
+                position: absolute;
+                max-width: 100%;
+                flex:auto;
+                justify-content: center;
+                z-index:-1000;
+            }
+            #iPad {
+                position: relative;
+                object-fit: cover;
+                z-index: -1;
+                top: 10vh;
+                overflow: hidden;
+                overflow-x: hidden;
+            }
+            #intro_content {
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            #section2_wrapper {
+                height: 150vh;
+                width: 100vw;
+                position: absolute;
+                top: 100vh;
+                max-width: 100%;
+                flex:auto;
+                justify-content: center;
+                z-index:-1000;
+
+                padding-top: 10vh;
+
+                background-color: 
+                rgb(22,22,23);
+            }
+            #ribbon {
+                align-items: center;
+                justify-content: center;
+                padding-block: 1.4vh;
+                background-color: #1d1c20;
+
+                font-weight: 500;
+                text-align: center;
+            }
+            @keyframes fadeIn {
+                0% {opacity: 0;}
+                80% {opacity: 0.6;}
+                100% {opacity: 1;}
+            }
+            #buy {
+                display: flex;
+                position: relative;
+                z-index: 2;
+                top: -5vh;
+
+                color: white;
+                text-align: center;
+                font-size: 1.4vw;
+                font-family: Inter, sans-serif;
+                font-weight: 600;
+
+                animation-name: fadeIn;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+                animation-delay: 2.8s;
+            }
+            #buy_button {
+                position: relative;
+                top: -3.4vh;
+                background-color: rgba(0,113,227,255);
+                border: none;
+                border-radius: 30px;
+
+                animation-name: fadeAndScaleIn;
+                animation-duration: 2.3s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: both;
+                animation-delay: 3.2s;
+            }
+            #in_buy_button {
+                padding-block: 10px;
+                padding-inline: 15px;
+                font-size: 1.28em;
+                text-align: center;
+                color: white;
+            }
+           .header1 {
+                font-family: Inter, san-serif;
+                font-size: 4.1vw;
+                font-weight: 600;
+                color:rgb(134,134,139);
+                width: 50%;
+
+                padding-left: 6vw;
+                float: left;
+
+            }
+            .hidden1 {
+                transform:translate(0, 1.5vh);
+                opacity: 0;
+                transition: all 2s;
+            }
+            .in-view1 {
+                transform:translate(0, 0);
+                 opacity: 1;
+            }
+            .header2 {
+                font-family: Inter, sans-serif;
+                font-size: 1.5vh;
+                color: rgb(32, 145, 216);
+                font-weight: 500;
+
+                float:right;
+                padding-left: 2vw;
+            }
+            .hidden2 {
+                transform:translate(0, 1.5vh);
+                opacity: 0;
+                transition: all 2s;
+            }
+            .in-view2 {
+                transform:translate(0, 0);
+                 opacity: 1;
+            }
+            .header2:nth-child(2){
+                transition-delay: 1s;
+            }
+            .gallery {
+                display: absolute;
+                position: relative;
+                list-style-type: none;
+                align-self: center;
+            }
+            .gallery-item-crop {
+                height: 50vh;
+                width: 80vw;
+                background-color: black;
+                padding-inline: 10vw;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="navbar">
+            <div id="nav__wrapper">
+                <ul class="nav-list">
+                    <li> LOGO </li>
+                    <li><a href="#"> Store </a></li>
+                    <li><a href="#"> Mac </a></li>
+                    <li><a href="#"> iPhone </a></li>
+                    <li><a href="#"> Watch </a></li>
+                    <li><a href="#"> Vision </a></li>
+                    <li><a href="#"> AirPods </a></li>
+                    <li><a href="#"> TV & Home</a></li>
+                    <li><a href="#"> Entertainment </a></li>
+                    <li><a href="#"> Accessories </a></li>
+                    <li><a href="#"> Support </a></li>
+                    <li> SCH </li>
+                    <li> BAG</li>
+                </ul>
+            </div>
+        </nav>
+        <section id="section1">
+            <div id="ribbon">
+                <p1 style="color: white; font-family: Inter, sans-serif; font-size: 1vw;">Buy iPad Pro starting at $899 with education savings. And now through 9/30, get a $100 gift card. <a href="#" style="color: rgb(32, 145, 216); text-decoration:none;">Shop ></a></p1>
+            </div>
+            <div id="intro_content">
+                <div class="title">
+                    <h1 id = "titleheader" style="font-weight: 550;"> iPad Pro </h1>
+                    <h1 id = "gradient" style="font-weight: 550;"> Thinpossible. </p1>
+                </div>
+                <picture id="iPad">
+                    <source srcset="https://www.apple.com/v/ipad-pro/aq/images/overview/hero/hero_endframe__sg50vzdd6sqm_small_2x.jpg" media="(max-width: 1000px)">
+                    <source srcset="https://www.apple.com/v/ipad-pro/aq/images/overview/hero/hero_endframe__sg50vzdd6sqm_large_2x.jpg">
+                    <img src="https://www.apple.com/v/ipad-pro/aq/images/overview/hero/hero_endframe__sg50vzdd6sqm_large_2x.jpg" style="width:auto; max-width: 100%;">
+                </picture>
+                <div>
+                    <p1 id="buy" >From $999 or $83.25/mo. for 12 mo.*</p1>
+                </div>
+                <div>
+                    <button id="buy_button">
+                        <div id="in_buy_button">
+                            <p1> Buy </p1>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="section2__wrapper">
+            <div id="section2_wrapper">
+                <div>
+                    <div style="width:100vw; overflow:clip; align-content: center; display:flex; padding: 0">
+                        <h1 class="header1 hidden1">Get the highlights.</h1>
+                    <div style="width:40%; display: flex; justify-content: right; padding-top: 4.5vh;">
+                        <h2 class="header2 hidden2"> Watch the film</h2>
+                        <h2 class="header2 hidden2"> Watch the event ></h2>
+                    </div>
+                </div>  
+                <ul class="gallery" style="display: grid;">
+                    <li id="media-gallery-item-1" class="gallery-item-1">
+                        <div class="gallery-item-crop">
+                            <div class="caption-container"></div>
+                            <div class="media-container">
+                                <!-- <picture class="highlights-design-1">
+                                    <source srcset="/v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_small.jpg, /v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_small_2x.jpg 2x" media="(max-width:734px)">
+                                    <source srcset="/v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_medium.jpg, /v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_medium_2x.jpg 2x" media="(max-width:1068px)">
+                                    <source srcset="/v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_large.jpg, /v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_large_2x.jpg 2x" media="(min-width:0px)">
+                                    <img src="/v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_large.jpg" onload="__lp(event)" alt="Side exterior, Thirteen inch iPad Pro,  5.1 millimeters, volume-up button, volume-down button, rounded corners, straight edges, raised Pro Camera System">
+                                </picture> -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
