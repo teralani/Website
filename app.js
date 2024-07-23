@@ -36,3 +36,11 @@ const header1s = document.querySelectorAll('.hidden1');
 const header2s = document.querySelectorAll('.hidden2');
 header1s.forEach((el) => observer1.observe(el));
 header2s.forEach((el) => observer2.observe(el));
+
+function setUpVideo() {
+    var video = document.getElementById('video')
+    console.log('played');
+    video.addEventListener('ended', function() {
+        video.style.visibility = "hidden";
+    })
+}
