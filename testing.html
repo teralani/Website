@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color:black;
+            padding-top: 10%;
+        }
+        #container {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color:rgb(81, 81, 87);
+
+            animation: onOpen 1.3s ease-out, expand 1.3s ease-out 2s;
+            animation-fill-mode: forwards;
+            transform-origin:25px 100px;
+        }
+        #blue-thing {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color:rgb(0, 0, 255);
+            z-index: -1;
+
+            animation: onOpen 1.3s ease-out, scaleUp 1.3s cubic-bezier(.37,-0.05,.31,1.28) 1s;
+            transform-origin:25px 100px;
+        }
+        @keyframes onOpen{
+            0% {
+                transform:scale3d(0,0,0) translate(0,-50px);
+            }
+            80%{
+                transform:scale3d(1, 1, 1);
+                
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        @keyframes scaleUp{
+            0%{scale: 1.0; transform-origin: center;}
+            50% {scale: 1.4; transform-origin: center;}
+            99% {scale: 0.7; transform-origin: center;}
+            100% {visibility: none;}
+        }
+        @keyframes expand {
+            to {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="blue-thing"></div>
+</body>
+</html>

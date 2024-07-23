@@ -14,6 +14,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
         <style>
+            
+            :root {
+                --animation-add: 1.7s;
+            }
             * {box-sizing:border-box}
             body {
                 display:absolute;
@@ -28,6 +32,8 @@
                 color: rgb(245,245,247);
                 font-family: Inter, sans-serif;
                 font-size: 4rem;
+                letter-spacing: -2px;
+                font-weight: 100;
                 text-align: center;
                 margin-bottom: 0;
 
@@ -35,13 +41,15 @@
                 animation-duration: 2.6s;
                 animation-timing-function: ease-in-out;
                 animation-fill-mode: both;
-                animation-delay: 2s;
+                animation-delay: calc(2s + var(--animation-add));
 
                 transform-origin: center bottom;
             }
             #gradient {
                 margin: 0;
                 font-size: 4rem;
+                letter-spacing: -2px;
+                font-weight: 100;
                 font-family: Inter, sans-serif;
                 background: linear-gradient(rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1)), linear-gradient(to right, #ee5b0c,#eeec72, #0665d1, #4493ee);
                 -webkit-text-fill-color: transparent; 
@@ -52,9 +60,10 @@
                 animation-duration: 2s;
                 animation-timing-function: ease-in-out;
                 animation-fill-mode: both;
-                animation-delay: 2.7s;
+                animation-delay: calc(2.7s + var(--animation-add));
 
                 transform-origin: center top;
+
             }
             @keyframes fadeAndScaleIn {
                 0% {transform: scale3d(.9, .9, 1); opacity: 0;}
@@ -115,7 +124,7 @@
             #section1 {
                 background: rgb(0,0,0);
                 height: fit-content;
-                min-height: 100%;
+                min-height: 100vh;
                 width: 100vw;
                 position: relative;
                 max-width: 100%;
@@ -130,26 +139,39 @@
             }
             #iPad {
                 position: relative;
-                object-fit: contain;
-                max-width: 1446px;
+                object-fit: fill;
+                width:auto;
+                height:min-content;
+                max-width: 1450px;
+                max-height:820px;
                 z-index: -11;
-                padding:0;
+                /* padding:0; */
                 /* top: 10vh; */
                 overflow: hidden;
-                overflow-x: hidden;
+                overflow-x: visible;
 
                 display:flex;
                 justify-content: center;
                 align-content: center;
                 justify-self: center;
                 align-self: center;
-                scale:93%;
 
-                transform: translateY(9.3%);
+                /* scale:93%;
+                transform: translateY(9.3%); */
+
+                transform:translateY(8.6%);
 
                 /* display:block;
                 margin:auto; */
 
+            }
+            #iPad-wrapper {
+                position: absolute;
+
+                max-width: 1450px;
+                max-height:820px;
+                /* border: 2px cyan solid; */
+                overflow:hidden;
             }
             #intro_content {
                 position:relative;
@@ -199,15 +221,16 @@
                 80% {opacity: 0.6;}
                 100% {opacity: 1;}
             }
-            #buy {
+            .buy {
                 display: flex;
                 position: relative;
                 z-index: 2;
                 /* top: -5vh; */
+                margin-bottom:1rem;
 
                 color: white;
                 text-align: center;
-                font-size: 1.4vrem;
+                font-size: 1.1rem;
                 font-family: Inter, sans-serif;
                 font-weight: 600;
 
@@ -215,7 +238,7 @@
                 animation-duration: 2s;
                 animation-timing-function: ease-in-out;
                 animation-fill-mode: both;
-                animation-delay: 2.8s;
+                animation-delay: calc(2.8s + var(--animation-add));
             }
             #buy_button {
                 position: relative;
@@ -228,7 +251,7 @@
                 animation-duration: 2.3s;
                 animation-timing-function: ease-in-out;
                 animation-fill-mode: both;
-                animation-delay: 3.2s;
+                animation-delay: calc(3.2s + var(--animation-add));
             }
             #in_buy_button {
                 padding-block: 10px;
@@ -255,7 +278,7 @@
             }
            .header1 {
                 font-family: Inter, san-serif;
-                font-size: 4.1vw;
+                font-size: 3.5rem;
                 font-weight: 600;
                 color:rgb(134,134,139);
                 width: 50%;
@@ -305,11 +328,33 @@
                 width: 80vw;
                 background-color: black;
             }
+
+            #blurred {
+                height: 100vh;
+                width:100%;
+                z-index:3;
+                color: lightslategray;
+                backdrop-filter: blur(10px);
+                position: absolute;
+                overflow: clip;
+                display:none;
+                pointer-events: none;
+            }
+            .nav-list>li>a:hover{
+                /* display:contents; */
+            }
+            .nav-list li a:hover {
+                color:green;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
         </style>
     </head>
     <body onload="setUpVideo()">
         <section id="section1">
             <div style="display: flex; align-content: center; flex-direction: column; position: absolute;width: 100%; top:0;">
+                <div id="blurred"></div>
                 <nav id="navbar">
                     <div id="nav__wrapper">
                         <ul class="nav-list">
@@ -333,8 +378,8 @@
                     <p1 style="color: white; font-family: Inter, sans-serif; font-size: clamp(0.5vw, 0.85em, 0.85em);">Buy iPad Pro starting at $899 with education savings. And now through 9/30, get a $100 gift card. <a href="#" style="color: rgb(32, 145, 216); text-decoration:none;">Shop ></a></p1>
                 </div>
             </div>
-            <div style="border: 2px solid yellow; position:absolute">
-                <picture id="iPad" style="border: 2px solid blue;">
+            <div id="iPad-wrapper">
+                <picture id="iPad" style="">
                     <source srcset="https://www.apple.com/v/ipad-pro/aq/images/overview/hero/hero_endframe__sg50vzdd6sqm_small_2x.jpg" media="(max-width: 1000px)">
                     <source srcset="https://www.apple.com/v/ipad-pro/aq/images/overview/hero/hero_endframe__sg50vzdd6sqm_large_2x.jpg">
                     <img src="https://www.apple.com/v/ipad-pro/aq/images/overview/hero/hero_endframe__sg50vzdd6sqm_large_2x.jpg" style="width:auto; max-width: 60vw;">
@@ -346,9 +391,9 @@
                     <h1 id = "gradient" style="font-weight: 550;"> Thinpossible. </p1>
                 </div>
                 <div id="video-container">
-                    <video id="video" inline muted controls autoplay src="https://apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/hero/large.mp4">Video not supported</video>
+                    <video style="" id="video" inline muted autoplay src="https://apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/hero/large.mp4">Video not supported</video>
                 </div>
-                <p1 id="buy" >From $999 or $83.25/mo. for 12 mo.<a href="#">*</a></p1>
+                <p1 class="buy" >From $999 or $83.25/mo. for 12 mo.<a href="#">*</a></p1>
                 <div>
                     <button id="buy_button">
                         <div id="in_buy_button">
