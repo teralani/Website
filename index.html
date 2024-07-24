@@ -45,6 +45,7 @@
                 animation-delay: calc(2s + var(--animation-add));
 
                 transform-origin: center bottom;
+                z-index:5;
             }
             #gradient {
                 margin: 0;
@@ -64,7 +65,7 @@
                 animation-delay: calc(2.7s + var(--animation-add));
 
                 transform-origin: center top;
-
+                z-index:5;
             }
             @keyframes fadeAndScaleIn {
                 0% {transform: scale3d(.9, .9, 1); opacity: 0;}
@@ -136,7 +137,7 @@
                 justify-items: center;
                 justify-content: center;
                 align-items: center;
-                z-index:-1000;
+                /* z-index:-1000; */
             }
             #iPad {
                 position: relative;
@@ -145,7 +146,9 @@
                 height:min-content;
                 max-width: 1450px;
                 max-height:820px;
-                z-index: -11;
+
+                /* z-index: 1; */
+
                 /* padding:0; */
                 /* top: 10vh; */
                 overflow: hidden;
@@ -193,7 +196,7 @@
                 max-width: 100%;
                 flex:auto;
                 justify-content: center;
-                z-index:-10000000;
+                /* z-index:-5; */
                 overflow-x: clip;
 
                 padding-top: 10vh;
@@ -263,7 +266,9 @@
             }
             #video {
                 position:absolute;
-                z-index: -10;
+
+                /* z-index: 1; */
+
                 width: auto;
 
                 /* border: 2px solid blue; */
@@ -396,7 +401,7 @@
                 animation-fill-mode:forwards;
             }
             .dot {
-                /* transition: all 0.3s ease-in-out 0.5s; */
+                transition: flex-basis 0.3s ease-in-out 0.5s !important;
                 /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
                 /* animation-fill-mode: both; */
 
@@ -438,9 +443,6 @@
                 animation-delay: calc(1.2s + 1.3s);
                 z-index:15;
             }
-            /* .focused {
-                flex-basis: 2.5em;
-            } */
             .dot:hover {
                 background-color: rgb(209, 209, 209);
             }
@@ -505,6 +507,7 @@
                 width:100%;
                 /* border: 2px solid white; */
                 transition:display ease 1s;
+                z-index: 100000000000000000000000000;
             }
             .outer-controls-placeholder {
                 position:absolute;
@@ -594,18 +597,17 @@
                     </li>
                 </ul>
                 <div class="outer-controls-placeholder"></div>
-                <div class="outer controls invisible">
-                    <div class="controls controls-container">
-                    <div class="dot controls"> <input type="radio" name="selector" value="slide1" checked></div>
-                    <div class="dot controls "> <input type="radio" name="selector" value="slide2"></div>
-                    <div class="dot controls "> <input type="radio" name="selector" value="slide3"></div>
-                    <div class="dot controls "> <input type="radio" name="selector" value="slide4"></div>
-                    <div class="dot controls "> <input type="radio" name="selector" value="slide5"></div>
-                    <div class="dot controls "> <input type="radio" name="selector"value="slide6"></div>
+                <div class="outer invisible">
+                    <div class="controls-container">
+                    <div class="dot"> <input type="radio" name="selector" value="slide1" checked></div>
+                    <div class="dot "> <input type="radio" name="selector" value="slide2"></div>
+                    <div class="dot "> <input type="radio" name="selector" value="slide3"></div>
+                    <div class="dot "> <input type="radio" name="selector" value="slide4"></div>
+                    <div class="dot "> <input type="radio" name="selector" value="slide5"></div>
+                    <div class="dot "> <input type="radio" name="selector"value="slide6"></div>
                     </div>
                     <div class="blue-thing controls"></div></div>
                 </div>
-                <h1 ><a target="_blank" style="font-size:100rem; color:white;" href="https://wxrdle.nextinteger.com">test</a></h1>
                 </div>
             </div>
         </section>
