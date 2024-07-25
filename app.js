@@ -48,6 +48,13 @@ const observer3 = new IntersectionObserver((entries) => {
             document.querySelectorAll('.controls-container').forEach((el) => el.classList.add('controls-container-seen'));
             document.querySelectorAll('.dot').forEach((el) => el.classList.add('dot-seen'));
             document.querySelectorAll('.blue-thing').forEach((el) => el.classList.add('blue-thing-seen'));
+        } else {
+            console.log('controls seen');
+            document.querySelectorAll('.outer').forEach((el) => el.classList.add('invisible'));
+
+            document.querySelectorAll('.controls-container').forEach((el) => el.classList.remove('controls-container-seen'));
+            document.querySelectorAll('.dot').forEach((el) => el.classList.remove('dot-seen'));
+            document.querySelectorAll('.blue-thing').forEach((el) => el.classList.remove('blue-thing-seen'));
         }
         });
 }, options3);

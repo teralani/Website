@@ -1,0 +1,70 @@
+.header1 {
+    font-family: Inter, san-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color:rgb(134,134,139);
+    width: 50%;
+
+    padding-left: 6vw;
+    float: left;
+
+}
+.hidden1 {
+    transform:translate(0, 1.5vh);
+    opacity: 0;
+    transition: all 2s;
+}
+.in-view1 {
+    transform:translate(0, 0);
+     opacity: 1;
+}
+.header2 {
+    font-family: Inter, sans-serif;
+    font-size: 1.5vh;
+    color: rgb(32, 145, 216);
+    font-weight: 500;
+
+    float:right;
+    padding-left: 2vw;
+}
+.hidden2 {
+    transform:translate(0, 1.5vh);
+    opacity: 0;
+    transition: all 2s;
+}
+.in-view2 {
+    transform:translate(0, 0);
+     opacity: 1;
+}
+.header2:nth-child(2){
+    transition-delay: 1s;
+}
+.gallery {
+    display: absolute;
+    position: relative;
+    list-style-type: none;
+    align-self: center;
+}
+.gallery-item-crop {
+    height: 50vh;
+    width: 80vw;
+    background-color: black;
+}
+
+#blurred {
+    height: 100vh;
+    width:100%;
+    z-index:3;
+    color: lightslategray;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    overflow: clip;
+    display:none;
+    pointer-events: none;
+}
+.nav-list li a:hover {
+    color:green;
+}
+a:hover {
+    text-decoration: underline;
+}
