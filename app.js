@@ -43,7 +43,9 @@ const observer3 = new IntersectionObserver((entries) => {
         console.log(entry)
         if (entry.isIntersecting) {
             console.log('controls seen');
+            document.querySelectorAll('.controls-container').forEach((el) => el.classList.remove('closed'));
             document.querySelectorAll('.outer').forEach((el) => el.classList.remove('invisible'));
+            
 
             document.querySelectorAll('.controls-container').forEach((el) => el.classList.add('controls-container-seen'));
             document.querySelectorAll('.dot').forEach((el) => el.classList.add('dot-seen'));
@@ -53,7 +55,10 @@ const observer3 = new IntersectionObserver((entries) => {
             document.querySelectorAll('.outer').forEach((el) => el.classList.add('invisible'));
 
             document.querySelectorAll('.controls-container').forEach((el) => el.classList.remove('controls-container-seen'));
+            document.querySelectorAll('.controls-container').forEach((el) => el.classList.add('closed'));
+            
             document.querySelectorAll('.dot').forEach((el) => el.classList.remove('dot-seen'));
+            
             document.querySelectorAll('.blue-thing').forEach((el) => el.classList.remove('blue-thing-seen'));
         }
         });

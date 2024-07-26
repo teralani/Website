@@ -35,3 +35,15 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+@keyframes fadeOut {
+    0% {visibility: visible;}
+    100% {visibility: hidden;}
+}
+@keyframes closed {
+    0% {
+        width: 200px; scale:1;
+    }
+    90% {width: 50px; scale:1}
+
+    100% {scale:0;}
+}
