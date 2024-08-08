@@ -101,6 +101,7 @@ a:hover {
     color: white;
     align-content: center;
     text-align: center;
+    font-size: 10rem;
 }
 
 .slider .dot:checked:nth-of-type(2) ~ .slider__inner{
