@@ -1,5 +1,5 @@
 #section2_wrapper {
-    height: max-content;
+    height: min-content;
     width: 100vw;
     max-width: 100%;
     flex:auto;
@@ -8,6 +8,7 @@
     overflow-x: clip;
 
     padding-top: 10vh;
+    padding-bottom: 10px;
     position: relative;
 
     background-color: 
