@@ -1,12 +1,25 @@
+#section2_wrapper {
+    height: max-content;
+    width: 100vw;
+    max-width: 100%;
+    flex:auto;
+    justify-content: center;
+    /* z-index:-5; */
+    overflow-x: clip;
+
+    padding-top: 10vh;
+    position: relative;
+
+    background-color: 
+    rgb(22,22,23);
+}
+
 .header1 {
     font-family: Inter, san-serif;
     font-size: 3.5rem;
     font-weight: 600;
     color:rgb(134,134,139);
-    width: 50%;
-
-    padding-left: 6vw;
-    float: left;
+    width: auto;
 
 }
 .hidden1 {
@@ -25,7 +38,7 @@
     font-weight: 500;
 
     float:right;
-    padding-left: 2vw;
+    padding-left: 3rem;
 }
 .hidden2 {
     transform:translate(0, 1.5vh);
@@ -40,18 +53,7 @@
     transition-delay: 1s;
 }
 
-#blurred {
-    height: 100vh;
-    width:100%;
-    z-index:3;
-    color: lightslategray;
-    backdrop-filter: blur(10px);
-    position: absolute;
-    overflow: clip;
-    display:none;
-    pointer-events: none;
-}
-.nav-list li a:hover {
+.nav-list li:hover {
     color:green;
 }
 a:hover {
@@ -71,14 +73,16 @@ a:hover {
     position: relative;
     list-style-type: none;
     align-self: center;
+
+    margin-bottom: 40vh;
 }
 
 .slider__inner {
     position: absolute;
     top:0;
-    left: 7vw;
-    width: 500vw;
-    height: 70vh;
+    left: 23vw;
+    width: 300vw;
+    height: 50vh;
     overflow: hidden;
     display:flex;
     flex-flow: row nowrap;
@@ -87,16 +91,22 @@ a:hover {
     /* border: 2px solid red; */
     padding-inline: 2vw;
 
-    transition: left 0.5s;
+    transition: left 0.6s;
 }
-
+.two-button-slider__inner{
+    width:100%;
+    padding-inline: 22vw;
+    left:0;
+    justify-self: center;
+    justify-content: center;
+}
 .slider__card {
     height:100%;
     margin: 2vw;
 
     flex:1;
     background-color: black;
-    border-radius: 50px;
+    border-radius: 30px;
 
     color: white;
     align-content: center;
@@ -109,7 +119,7 @@ a:hover {
 }
 
 .slider__wrapper{
-    height:70vh;
+    height:50vh;
     position:relative;
     width: 100vw;
 }

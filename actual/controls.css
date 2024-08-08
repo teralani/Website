@@ -20,6 +20,10 @@
     padding-inline:10px;
 
 }
+.controls-container-two-button {
+    max-width: 100px;
+    display:column;
+}
 .controls-container-seen {
     animation: onOpen 0.5s cubic-bezier(.47,.23,.32,1.5), expand 1.3s ease-out 1.4s;
     animation-fill-mode: forwards;
@@ -52,6 +56,25 @@
     width: 7px;
     height: 7px;
     border-radius: 7px;
+    background-color: white;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+}
+
+.dot-two-button {
+    transition: flex-basis 0.3s ease;
+    /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
+    /* animation-fill-mode: both; */
+    flex-basis: auto;
+
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
     background-color: white;
 
     position: relative;
@@ -97,6 +120,10 @@
 .dot:has(input:checked) {
     
     flex-basis: 2.5em;
+}
+
+.dot-two-button:has(input:checked) {
+    flex-basis: auto;
 }
 
 .dot input {
@@ -153,4 +180,35 @@
 .closed {
     animation: closed 1s ease-in-out;
     animation-fill-mode: forwards;
+}
+
+.dot-two-button-highlight {
+    transition: width 5s, height 5s, border radius 5s, opacity 5s;
+    /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
+    /* animation-fill-mode: both; */
+
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: white;
+
+    /* position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* opacity: 0 !important; */
+    position:absolute;
+
+    z-index: -1;
+    align-content: center;
+    justify-items: center;
+}
+.dot:has(input:checked) ~.dot-two-button-highlight{
+    transition: width 5s, height 5s, border radius 5s, opacity 5s;
+    border:2px solid blue;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    opacity: 1 !important;
 }

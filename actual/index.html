@@ -30,10 +30,26 @@
                 margin:0;
                 max-width: 100vw;
                 z-index: -100;
+                height: auto;
+            }
+            #sticky-navbar {
+                top:-4vh;
+                width:100vw;
+                backdrop-filter: blur(20px);
+                height:4vh;
+                position:fixed;
+                z-index: 50;
+                transition: top 1s;
+            }
+            #sticky-navbar.seen{
+                top:0;
             }
         </style>
     </head>
     <body onload="setUpVideo()">
+        <div id="sticky-navbar" class="">
+            <div style="height:100%; background-color: #181717; opacity: 0.75; width:100%; border:1.5px solid rgb(75, 75, 75);"></div>
+        </div>
         <section id="section1">
             <div style="display: flex; align-content: center; flex-direction: column; position: absolute;width: 100%; top:0;">
                 <div id="blurred"></div>
@@ -87,13 +103,15 @@
         </section>
         <section id="section2__wrapper" style="position:relative;">
             <div id="section2_wrapper">
-                <div>
-                    <div style="width:100vw; overflow:clip; align-content: center; display:flex; padding: 0">
+                <div style="justify-items: center; padding-inline: 27vw; display:flex;">
+                    <div style="width:max-content; overflow:clip; align-content: center; display:flex; padding: 0; position:relative; justify-self: left; float:inline-start; flex:1;">
                         <h1 class="header1 hidden1">Get the highlights.</h1>
-                    <div style="width:40%; display: flex; justify-content: right; padding-top: 4.5vh;">
+                    </div>
+                    <div style="width:max-content; display: flex; justify-content: right; padding-top: 4.5vh; position: relative; float:inline-end;flex:1;">
                         <h2 class="header2 hidden2"> Watch the film</h2>
                         <h2 class="header2 hidden2"> Watch the event ></h2>
                     </div>
+                
                 </div>  
                 <div class="slider">
                         <div class="slider__wrapper">
@@ -120,7 +138,32 @@
                             <div class="blue-thing controls"></div></div>
                         </div>
                     </div>
+                
+                <div style="justify-items: center; padding-inline: 24vw; display:flex;">
+                    <div style="width:max-content; overflow:clip; align-content: center; display:flex; padding: 0; position:relative; justify-self: left; float:inline-start; flex:1;">
+                        <h1 class="header1 hidden1">Get the highlights.</h1>
+                    </div>
                 </div>
+                <div class="slider">
+                    <div class="slider__wrapper">
+                        <div class="slider__inner two-button-slider__inner">
+                            <div class="slider__card">1</div>
+                            <div class="slider__card">2</div>
+                        </div>
+                    </div>
+               
+                <div class="outer-controls-placeholder">
+                    <div class="outer invisible">
+                        <div class="controls-container controls-container-two-button closed" style="height:70px; width: 70px; min-width: 70px;">
+                            <div class="dot dot-two-button" style="background-color: #302c2c;"> <input type="radio" name="selector2" value="slide1" checked> </div>
+                            <div class="dot-two-button-highlight" style="justify-self: left;"> </div>
+                            <div class="dot dot-two-button"> <input type="radio" name="selector2" value="slide2"> </div>
+                            <div class="dot-two-button-highlight"> </div>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+                </div>
+                <!-- </div> -->
             </div>
         </section>
     </body>
