@@ -162,23 +162,27 @@
 .slider__inner {
     position: absolute;
     top:0;
-    left:0;
-    width: 500%;
+    left: 7vw;
+    width: 500vw;
     height: 50vh;
     overflow: hidden;
     display:flex;
     flex-flow: row nowrap;
+    align-items: center;
 
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    padding-inline: 2vw;
+
+    transition: left 0.5s;
 }
 
 .slider__card {
     height:100%;
-    margin: 2rem;
+    margin: 2vw;
 
-    border-radius: 100px;
-    border: 2px solid yellow;
     flex:1;
+    background-color: black;
+    border-radius: 50px;
 
 }
 

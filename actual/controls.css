@@ -119,14 +119,15 @@
     bottom:1vh; */
     position:fixed;
     bottom:1vh;
+    justify-self: center;
 
     display:flex;
     justify-content: center;
     align-items: center;
-    padding-top: 0.5%;
-    padding-bottom: 2%;
+    margin-top: 0%;
+    /* padding-bottom: 2%; */
 
-    width:100%;
+    width:100vw;
     /* border: 2px solid white; */
     
     z-index: 100000000000000000000000000;
@@ -134,9 +135,14 @@
     transition: opacity 0.3s linear 2s;
 }
 .outer-controls-placeholder {
-    position:absolute;
-    /* border: 2px solid yellow; */
-    justify-self: center;
+    margin-top: 2%;
+    position:relative;
+    justify-self: left;
+
+    justify-items: center;
+
+    height: 50px;
+    width:100vw;
 }
 
 .invisible {

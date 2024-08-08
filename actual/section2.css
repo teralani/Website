@@ -39,17 +39,6 @@
 .header2:nth-child(2){
     transition-delay: 1s;
 }
-.gallery {
-    display: absolute;
-    position: relative;
-    list-style-type: none;
-    align-self: center;
-}
-.gallery-item-crop {
-    height: 50vh;
-    width: 80vw;
-    background-color: black;
-}
 
 #blurred {
     height: 100vh;
@@ -67,4 +56,59 @@
 }
 a:hover {
     text-decoration: underline;
+}
+
+
+.slider {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width:100vw;
+    height:fit-content;
+
+    position: relative;
+    list-style-type: none;
+    align-self: center;
+}
+
+.slider__inner {
+    position: absolute;
+    top:0;
+    left: 7vw;
+    width: 500vw;
+    height: 70vh;
+    overflow: hidden;
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    /* border: 2px solid red; */
+    padding-inline: 2vw;
+
+    transition: left 0.5s;
+}
+
+.slider__card {
+    height:100%;
+    margin: 2vw;
+
+    flex:1;
+    background-color: black;
+    border-radius: 50px;
+
+    color: white;
+    align-content: center;
+    text-align: center;
+}
+
+.slider .dot:checked:nth-of-type(2) ~ .slider__inner{
+    left: 100px;
+}
+
+.slider__wrapper{
+    height:70vh;
+    position:relative;
+    width: 100vw;
 }
