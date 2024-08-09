@@ -74,23 +74,22 @@ a:hover {
     position: relative;
     list-style-type: none;
     align-self: center;
-
-    margin-bottom: 40vh;
 }
 
 .slider__inner {
     position: absolute;
     top:0;
-    left: 23vw;
-    width: 300vw;
+    left: 0;
+    width: clamp( 0px, 500vw, 8195.5px);
     height: 50vh;
-    overflow: hidden;
+    overflow: visible;
     display:flex;
     flex-flow: row nowrap;
     align-items: center;
 
     /* border: 2px solid red; */
-    padding-inline: 2vw;
+    /* padding-inline: 1vw; */
+    margin-left: 22.4%;
 
     transition: left 0.6s;
 }
@@ -100,10 +99,11 @@ a:hover {
     left:0;
     justify-self: center;
     justify-content: center;
+    margin-left: 0;
 }
 .slider__card {
     height:100%;
-    margin: 2vw;
+    margin: 1vw;
 
     flex:1;
     background-color: black;
@@ -113,6 +113,7 @@ a:hover {
     align-content: center;
     text-align: center;
     font-size: 10rem;
+    overflow: clip;
 }
 
 .slider .dot:checked:nth-of-type(2) ~ .slider__inner{

@@ -36,7 +36,7 @@
                 top:-4vh;
                 width:100vw;
                 backdrop-filter: blur(20px);
-                height:4vh;
+                height:50px;
                 position:fixed;
                 z-index: 50;
                 transition: top 1s;
@@ -107,23 +107,22 @@
                     <div style="width:max-content; overflow:clip; align-content: center; display:flex; padding: 0; position:relative; justify-self: left; float:inline-start; flex:1;">
                         <h1 class="header1 hidden1">Get the highlights.</h1>
                     </div>
-                    <div style="width:max-content; display: flex; justify-content: right; padding-top: 4.5vh; position: relative; float:inline-end;flex:1;">
+                    <div style="width:max-content; display: block; justify-content: right; padding-top: 4.5vh; position: relative; float:inline-end;flex:1;">
                         <h2 class="header2 hidden2"> Watch the film</h2>
                         <h2 class="header2 hidden2"> Watch the event ></h2>
                     </div>
-                
                 </div>  
-                <div class="slider">
-                        <div class="slider__wrapper">
-                            <div class="slider__inner">
-                                <div class="slider__card">1</div>
-                                <div class="slider__card">2</div>
-                                <div class="slider__card">3</div>
-                                <div class="slider__card">4</div>
-                                <div class="slider__card">5</div>
-                                <div class="slider__card">6</div>
-                            </div>
+                <div class="slider" style="margin-bottom: 25vh;">
+                    <div class="slider__wrapper">
+                        <div class="slider__inner">
+                            <div class="slider__card">1</div>
+                            <div class="slider__card">2</div>
+                            <div class="slider__card">3</div>
+                            <div class="slider__card">4</div>
+                            <div class="slider__card">5</div>
+                            <div class="slider__card">6</div>
                         </div>
+                    </div>
                    
                     <div class="outer-controls-placeholder">
                         <div class="outer invisible">
@@ -138,32 +137,49 @@
                             <div class="blue-thing controls"></div></div>
                         </div>
                     </div>
-                
                 <div style="justify-items: center; padding-inline: 24vw; display:flex;">
                     <div style="width:max-content; overflow:clip; align-content: center; display:flex; padding: 0; position:relative; justify-self: left; float:inline-start; flex:1;">
-                        <h1 class="header1 hidden1">Get the highlights.</h1>
+                        <h1 class="header1 hidden1">Take a closer look.</h1>
                     </div>
                 </div>
-                <div class="slider">
+                <div class="slider" style="padding-bottom: 4vh;">
                     <div class="slider__wrapper">
                         <div class="slider__inner two-button-slider__inner">
-                            <div class="slider__card">1</div>
-                            <div class="slider__card">2</div>
+                            <div class="slider__card" style="max-width: 25vw; height: 55vh">
+                                <div style="width: 100%; height:100%">
+                                    <img class="grey" style="height:inherit; width:inherit; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
+                                    <img style="height:inherit; width:inherit" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="slider__card" style="max-width: 25vw; height: 55vh">
+                                <div style="width: 100%; height:100%">
+                                    <img class="grey" style="height:inherit; width:inherit; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
+                                    <img style="height:inherit; width:inherit" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
-               
-                <div class="outer-controls-placeholder">
-                    <div class="outer invisible">
-                        <div class="controls-container controls-container-two-button closed" style="height:70px; width: 70px; min-width: 70px;">
-                            <div class="dot dot-two-button" style="background-color: #302c2c;"> <input type="radio" name="selector2" value="slide1" checked> </div>
-                            <div class="dot-two-button-highlight" style="justify-self: left;"> </div>
-                            <div class="dot dot-two-button"> <input type="radio" name="selector2" value="slide2"> </div>
-                            <div class="dot-two-button-highlight"> </div>
+                    <div class="outer-controls-placeholder">
+                        <div class="outer invisible">
+                            <div class="controls-container controls-container-two-button closed" style="height:70px; width: 70px; min-width: 70px; display:grid-row; row-gap:unset;">
+                                <div style="width:50%;">
+                                    <div class="dot dot-two-button-highlight selected" style="flex:none; margin:auto;" >
+                                        <div class="dot dot-two-button" style="background-color: #302c2c; z-index:1; box-shadow: inset 0 0.5px 1px;"> 
+                                            <input checked type="radio" name="selector2" value="slide1" style="width:100%; height:100%; border-radius:100%">      
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="width:50%;">
+                                    <div class="dot dot-two-button-highlight" style="justify-self: center; flex:none; margin:auto;">
+                                        <div class="dot dot-two-button" id="white" style="background-color: #ebe2e2;" > 
+                                            <input type="radio" name="selector2" value="slide2" style="width:100%; height:100%; border-radius:100%;">      
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blue-thing controls"></div></div>
                         </div>
-                        <div class="blue-thing controls"></div></div>
                     </div>
-                </div>
-                <!-- </div> -->
             </div>
         </section>
     </body>

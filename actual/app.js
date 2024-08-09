@@ -125,12 +125,19 @@ function control1(button) {
     // var checked = document.querySelector(".slider").querySelector('input[name="selector"]:checked').value;
     var s = document.getElementsByClassName('slider__inner')[0];
     console.log("selected: " + button.value);
-    if(button.value == "slide1") {s.style.left = '23vw'}
-    if(button.value  == "slide2") {s.style.left = '-26vw'}
-    if(button.value  == "slide3") {s.style.left = '-75vw'}
-    if(button.value  == "slide4") {s.style.left = '-124vw'}
-    if(button.value  == "slide5") {s.style.left = '-173vw'}
-    if(button.value  == "slide6") {s.style.left = '-222vw'}
+    // if(button.value == "slide1") {s.style.left = '23vw'}
+    // if(button.value  == "slide2") {s.style.left = '-26vw'}
+    // if(button.value  == "slide3") {s.style.left = '-75vw'}
+    // if(button.value  == "slide4") {s.style.left = '-124vw'}
+    // if(button.value  == "slide5") {s.style.left = '-173vw'}
+    // if(button.value  == "slide6") {s.style.left = '-222vw'}
+
+    if(button.value == "slide1") {s.style.left = '0'}
+    if(button.value  == "slide2") {s.style.left = '-55%'}
+    if(button.value  == "slide3") {s.style.left = '-107%'}
+    if(button.value  == "slide4") {s.style.left = '-160%'}
+    if(button.value  == "slide5") {s.style.left = '-215%'}
+    if(button.value  == "slide6") {s.style.left = '-265%'}
     }
 }
 
@@ -145,3 +152,36 @@ nav.addEventListener("mouseenter", e=> {
 nav.addEventListener("mouseleave", e=> {
     document.getElementById("blurred").style.display = "none";
 });
+
+function control2(button) {
+    console.log("selected: " + button.value);
+    var one = document.querySelectorAll('.slider')[1].querySelectorAll(".slider__card")[0];
+    var one1 = document.querySelectorAll(".grey")[0];
+    var two = document.querySelectorAll('.slider')[1].querySelectorAll(".slider__card")[1];
+    var two1 = document.querySelectorAll(".grey")[1];
+
+    if(button.checked == true) {
+        if(button.value == "slide1") {
+            one1.style.display = "block";
+            two1.style.display = "block";
+
+            two.style.color = "grey";
+            document.querySelectorAll('.slider')[1].querySelectorAll('.dot-two-button-highlight')[0].classList.add('selected');
+            document.querySelectorAll('.slider')[1].querySelectorAll('.dot-two-button-highlight')[1].classList.remove('selected')
+        }
+        if(button.value == "slide2") {
+            one1.style.display = "none";
+            two1.style.display = "none";
+
+            one.style.color = "white";
+             two.style.color = "white";
+            document.querySelectorAll('.slider')[1].querySelectorAll('.dot-two-button-highlight')[1].classList.add('selected');
+            document.querySelectorAll('.slider')[1].querySelectorAll('.dot-two-button-highlight')[0].classList.remove('selected')
+            }
+    }
+};
+let slider2_buttons = document.querySelectorAll('input[name="selector2"]');
+console.log(slider2_buttons);
+slider2_buttons.forEach(rb=>rb.addEventListener("change", e => {
+    control2(rb)
+}));

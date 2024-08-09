@@ -67,14 +67,14 @@
 }
 
 .dot-two-button {
-    transition: flex-basis 0.3s ease;
     /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
     /* animation-fill-mode: both; */
-    flex-basis: auto;
+    flex-basis:content;
+    flex:none;
 
     width: 25px;
     height: 25px;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: white;
 
     position: relative;
@@ -183,13 +183,14 @@
 }
 
 .dot-two-button-highlight {
-    transition: width 5s, height 5s, border radius 5s, opacity 5s;
+    transition: width 0.5s, height 0.5s, border-radius 0.5s, opacity 0.25s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.2);
     /* animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4); */
     /* animation-fill-mode: both; */
 
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
     background-color: white;
 
     /* position: absolute;
@@ -198,17 +199,26 @@
     justify-content: center; */
 
     /* opacity: 0 !important; */
-    position:absolute;
+    position:relative;
+    align-self: center;
+    justify-self: center;
 
-    z-index: -1;
+    display: flex;
+    z-index: -3;
     align-content: center;
+    align-items: center;
     justify-items: center;
+    justify-content: center;
 }
-.dot:has(input:checked) ~.dot-two-button-highlight{
-    transition: width 5s, height 5s, border radius 5s, opacity 5s;
-    border:2px solid blue;
-    width: 35px;
-    height: 35px;
-    border-radius: 30px;
+.dot-two-button-highlight.selected{
+    /* transition: width 5s, height 5s, border radius 5s, opacity 5s; */
+    border:3px solid rgb(32, 145, 216);
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+
     opacity: 1 !important;
+}
+.dot-two-button-highlight.selected > .dot-two-button {
+    border: 2px rgba(81, 81, 87, 0.75) solid;
 }
