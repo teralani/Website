@@ -15,13 +15,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="section1.css">
         <link rel="stylesheet" href="section2.css">
+        <link rel="stylesheet" href="section3.css">
         <link rel="stylesheet" href="animations.css">
         <link rel="stylesheet" href="controls.css">
         <style>
             :root {
                 --animation-add: 1.7s;
             }
-            * {box-sizing:border-box}
+            * {box-sizing:border-box; font-family: Inter, sanserif;}
             body {
                 /* display:absolute; */
                 flex-direction: column;
@@ -40,6 +41,26 @@
                 position:fixed;
                 z-index: 50;
                 transition: top 1s;
+                h3 {
+                    align-self: center;
+                    color: white;
+                    font-size: 1.2em;
+                }
+                p {
+                    font-size: 0.75em;
+                    color: rgb(255, 255, 255);
+                    font-weight: 400;
+                }
+                button {
+                    background-color: rgb(41, 134, 255);
+                    border: none;
+                    border-radius: 30px;
+                    padding: 5px;
+                    width: 45px;
+                    color: white;
+                    font-size: 0.75em;;
+                    align-items: center;
+                }
             }
             #sticky-navbar.seen{
                 top:0;
@@ -48,7 +69,16 @@
     </head>
     <body onload="setUpVideo()">
         <div id="sticky-navbar" class="">
-            <div style="height:100%; background-color: #181717; opacity: 0.75; width:100%; border:1.5px solid rgb(75, 75, 75);"></div>
+            <div style="height:100%; background-color: #181717; opacity: 0.9; width:100%; border:1.5px solid rgb(75, 75, 75); padding-inline: 25vw; display: flex; justify-content: safe;">
+                <h3 style="float: left;">iPad Pro</h3>
+                <div style="width: 20vw; display: flex; margin-left:auto; justify-content: space-evenly; align-items: center;">
+                    <p>Overview</p>
+                    <p>Tech Specs</p>
+                    <p>Compare</p>
+                    <p>Why iPad</p>
+                    <button>Buy</button>
+                </div>
+            </div>
         </div>
         <section id="section1">
             <div style="display: flex; align-content: center; flex-direction: column; position: absolute;width: 100%; top:0;">
@@ -103,11 +133,11 @@
         </section>
         <section id="section2__wrapper" style="position:relative;">
             <div id="section2_wrapper">
-                <div style="justify-items: center; padding-inline: 27vw; display:flex;">
-                    <div style="width:max-content; overflow:clip; align-content: center; display:flex; padding: 0; position:relative; justify-self: left; float:inline-start; flex:1;">
+                <div style="justify-items: center; padding-inline: 20vw; display:flex; flex-flow: row wrap; justify-content: space-between;">
+                    <div style="width:min-content; overflow:clip; align-content: center; display:flex; padding: 0; position:relative; justify-self: left; float:inline-start;">
                         <h1 class="header1 hidden1">Get the highlights.</h1>
                     </div>
-                    <div style="width:max-content; display: block; justify-content: right; padding-top: 4.5vh; position: relative; float:inline-end;flex:1;">
+                    <div style="width:max-content; display: flex; justify-content: left; padding-top: 4.5vh; position: relative; float:right;">
                         <h2 class="header2 hidden2"> Watch the film</h2>
                         <h2 class="header2 hidden2"> Watch the event ></h2>
                     </div>
@@ -126,7 +156,7 @@
                    
                     <div class="outer-controls-placeholder">
                         <div class="outer invisible">
-                            <div class="controls-container closed">
+                            <div class="controls-container closed" style="max-width:200px">
                             <div class="dot"> <input type="radio" name="selector" value="slide1" checked></div>
                             <div class="dot "> <input type="radio" name="selector" value="slide2"></div>
                             <div class="dot "> <input type="radio" name="selector" value="slide3"></div>
@@ -147,14 +177,14 @@
                         <div class="slider__inner two-button-slider__inner">
                             <div class="slider__card" style="max-width: 25vw; height: 55vh">
                                 <div style="width: 100%; height:100%">
-                                    <img class="grey" style="height:inherit; width:inherit; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
-                                    <img style="height:inherit; width:inherit" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
+                                    <img class="grey" style="height:inherit; width:auto; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
+                                    <img style="height:inherit; width:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
                                 </div>
                             </div>
                             <div class="slider__card" style="max-width: 25vw; height: 55vh">
                                 <div style="width: 100%; height:100%">
-                                    <img class="grey" style="height:inherit; width:inherit; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
-                                    <img style="height:inherit; width:inherit" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
+                                    <img class="grey" style="height:inherit; width:auto; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
+                                    <img style="height:inherit; width:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -180,6 +210,310 @@
                             <div class="blue-thing controls"></div></div>
                         </div>
                     </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div style="justify-items: center; padding-inline: 24vw; display:flex;">
+                <div style="width:max-content; overflow:clip; align-content: center; display:flex; padding: 0; position:relative; justify-self: left; float:inline-start; flex:1;">
+                    <h1 class="header1 hidden1">Explore the full story.</h1>
+                </div>
+            </div>
+            <div id="section3_wrapper">
+                <div class="block" style="height:min-content">
+                    <h1 class="s3__headers">Thrill. Sleeker.</h1>
+                    <p style="padding-bottom: 2vh;">The all-new iPad Pro packs astonishing power into an unbelievably thin, light, and portable design. Push the limits of what’s possible on iPad with a superportable 11-inch model and an expansive 13-inch model that is <b style="color:white; font-weight: 600;"> the thinnest product Apple has ever created</b>.</p>
+                    <div style="position: relative; width: 100%; height: min(110vh, 1406px); display: flex; flex-direction: column; justify-content: center;">
+                        <h1 style="color:white; font-size:3rem; position: absolute; margin-left:55%; top: 30vh; z-index: 0 !important; font-weight: 500;">5.1 mm</h1>
+                        <p style="position: absolute; left: 17.5vw; top: 40vh; z-index: 0 !important; ">thin and light design</p>
+                        <video preload="auto" style="margin-bottom: auto;" class="videos" id="thin-video" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/design-hero/large_2x.webm"></video>
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Dive into materials and design</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                  C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                  c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                </div>
+                <div class="block" style="height:min-content; display: flex; flex-direction: column; width: 100%">
+                    <h1 class="s3__headers" style="text-align: center;">The world's most advanced display.</h1>
+                    <div style="position: relative; width: 100%; height: 80vh; display: flex; flex-direction: column; justify-self: center;">
+                        <video preload="auto" style="margin-bottom: auto; justify-self: center; position: relative; align-self: center;" class="videos" id="satelite" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/display-hero/large.mp4"></video>
+                    </div>
+                    <p style="font-size: 1em; margin-bottom: 10%;"><a style="font-size: 1em; color: rgba(134,134,139,255); font-weight: 400;" href="#">Stream <em>Constellation</em> on Apple TV+</a></p>
+                    <p style="padding-bottom: 2vh;">The new Ultra Retina XDR display introduces groundbreaking tandem OLED technology. Extreme brightness, incredibly precise contrast, and advanced technologies like ProMotion and True Tone give you a <b style="color:white; font-weight: 600;"> jaw-dropping visual experience</b>. And you can use Reference Mode for color-accurate workflows.</p>
+                    <div style="height:auto; width:100vw; position: relative; margin-top: 5%; margin-bottom: 7vh; display: flex; flex-direction: column; justify-self: center; justify-items: center; align-content: center; align-self: center;">
+                        <table style="-webkit-background-clip: text;
+                        background-clip: text;
+                        background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255)), linear-gradient(to right, #ee5b0c,#f3f2a3, #0665d1, #4493ee);">
+                            <tr>
+                                <td>
+                                    <h3 class="data1">1000nits</h1>
+                                    <p class="data2">full-screen brightness</p>
+                                </td>
+                                <td>
+                                    <h3 class="data1">1600 nits</h1>
+                                    <p class="data2">peak HDR brightness</p>
+                                </td>
+                                <td>
+                                    <h3 class="data1">2,000,000:1</h1>
+                                    <p class="data2">contrast ratio</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3 class="data1">True Tone</h1>
+                                    <p class="data2">for comfortable viewing</p>
+                                </td>
+                                <td>
+                                    <h3 class="data1">ProMotion</h1>
+                                    <p class="data2">adaptive 10-120Hz refresh rate
+                                    </p>
+                                </td>
+                                <td>
+                                    <h3 class="data1">P3</h1>
+                                    <p class="data2">wide color</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder" style="margin-bottom: 5vh;">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Immerse yourself in Ultra Retina XDR</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                  C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                  c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+                <div class="parallax-wrapper">
+                    <div class="moveable">
+                        <div id="button">
+                            <input type="checkbox" checked onclick="vidbutton(this)">
+                            <div></div>
+                        </div>
+                        <div class="mask-for-text">
+                            <svg id="clip" x="0px" y="0px" viewBox="0 0 1920 1080" style="transform: matrix(100, 0, 0, 100, 0, 0);" xml:space="preserve">
+                                <g>
+                                <g>
+                                    <path d="M1364.68,484.97c-6.48,10.3-13,20.64-19.56,31.01c-6.56,10.37-13.11,20.74-19.66,31.11
+                                    c-6.56,10.37-13.11,20.71-19.66,31.01c-6.56,10.3-13.07,20.64-19.56,31.01v1.73h99.4V453.96h-1.51
+                                    C1377.65,464.33,1371.16,474.67,1364.68,484.97z"></path>
+                                </g>
+                                <g>
+                                    <path d="M0,0v1080h1920V0H0z M614.8,351.95c4.86-10.55,10.37-19.29,16.53-26.2c7.85-9.34,17.75-17.09,29.7-23.26
+                                    c11.95-6.17,23.35-9.43,34.19-9.81c0.56,2.43,0.84,5.32,0.84,8.69c0,11.21-2.15,22.09-6.44,32.65
+                                    c-4.3,10.56-9.81,19.94-16.53,28.16c-7.29,8.78-16.44,16.12-27.46,22c-11.02,5.88-21.48,8.83-31.39,8.83
+                                    c-2.06,0-4.02-0.18-5.88-0.56c-0.19-0.56-0.38-1.59-0.56-3.08c-0.19-1.49-0.28-3.08-0.28-4.77
+                                    C607.51,373.39,609.94,362.51,614.8,351.95z M778.59,631.48c-4.58,12.52-12.1,26.44-22.56,41.76
+                                    c-9.16,13.27-19.01,25.5-29.57,36.71c-10.56,11.21-23.21,16.81-37.97,16.81c-9.9,0-18.03-1.45-24.38-4.34
+                                    c-6.35-2.9-12.89-5.79-19.62-8.69c-6.73-2.89-15.79-4.34-27.18-4.34c-11.03,0-20.23,1.5-27.6,4.48
+                                    c-7.38,2.99-14.39,5.98-21.02,8.97c-6.63,2.99-14.43,4.48-23.4,4.48c-13.64,0-25.6-5.42-35.87-16.25
+                                    c-10.28-10.83-20.83-23.82-31.67-38.95c-12.52-17.94-23.22-39.84-32.09-65.72c-8.87-25.87-13.31-51.98-13.31-78.32
+                                    c0-28.21,5.32-51.89,15.97-71.04c10.65-19.15,24.33-33.63,41.05-43.43c16.72-9.81,34.05-14.71,51.98-14.71
+                                    c9.53,0,18.49,1.54,26.9,4.62c8.41,3.08,16.3,6.21,23.68,9.39c7.38,3.18,14.06,4.77,20.04,4.77c5.79,0,12.51-1.68,20.18-5.05
+                                    c7.66-3.36,16.25-6.68,25.78-9.95c9.53-3.27,19.71-4.91,30.55-4.91c4.11,0,11.11,0.66,21.02,1.96c9.9,1.31,20.78,5,32.65,11.07
+                                    c11.86,6.07,22.65,16.11,32.37,30.12c-0.56,0.56-3.27,2.57-8.13,6.03c-4.86,3.46-10.28,8.5-16.25,15.13
+                                    c-5.98,6.63-11.21,15.04-15.69,25.22c-4.48,10.18-6.73,22.28-6.73,36.29c0,16.07,2.85,29.7,8.55,40.91
+                                    c5.7,11.21,12.33,20.22,19.9,27.04c7.57,6.82,14.29,11.82,20.18,14.99c5.88,3.18,9.01,4.86,9.39,5.04
+                                    C785.55,612.33,783.17,618.97,778.59,631.48z M1182.41,718.44h-58.34V507.77h-1.69l-84.09,210.68h-41.06l-84.09-210.68h-1.91
+                                    v210.68h-58.13v-311.8h75.41l88.59,224.07h1.3l88.38-224.07h75.63V718.44z M1487.63,661.4h-41.05v57.05h-62.23V661.4h-154.93
+                                    v-54.67c8.21-13.25,16.49-26.58,24.85-39.97c8.35-13.4,16.71-26.76,25.06-40.08c8.35-13.32,16.71-26.65,25.06-39.97
+                                    c8.35-13.32,16.71-26.68,25.06-40.08c8.35-13.4,16.64-26.72,24.85-39.97h92.26v202.47h41.05V661.4z"></path>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <video class="cool-vid" loop autoplay inline muted src="https://apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/m4-chip/large.mp4"></video>
+                    </div>
+                </div>
+                
+                <div class="block" style="height:min-content; display: flex; flex-direction: column; position: relative; width: 115%; margin-bottom: 8%;">
+                    <h1 class="s3__headers" style="text-align: left; margin-bottom: 5%;">Rocket Chip.</h1>
+                    <div style=" display: grid; grid-template-columns: auto auto; justify-content: evenly; gap: 8vw; width: 100%; align-self: center;">
+                        <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal;">Introducing <b style="color:white; font-weight: 600;">M4, the next generation of Apple silicon</b>, delivering outrageous performance in the exceptionally thin and light design of iPad Pro. An entirely new display engine enables stunning precision, color, and brightness. A powerful GPU with hardware-accelerated ray tracing renders game-changing graphics. And the Neural Engine in M4 makes iPad Pro an absolute powerhouse for AI.</p>
+                        <div style=" display: flex; flex-direction: column; flex: 1">
+                            <p style="padding-bottom: 2vh; text-align: left;">Up to <br><span style="color:white; font-weight: 600; font-size: 2em; line-height: 140%;">4x faster</span><br>pro rendering performance than M2</p>
+                            <p style="padding-bottom: 2vh; text-align: left;">Up to <br><span style="color:white; font-weight: 600; font-size: 2em;">1.5x faster</span><br>CPU performance than M2</p>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder" style="margin-bottom: 5vh;">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Learn how M4 powers performance</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                  C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                  c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+
+                <div class="block" style="height:min-content; display: flex; flex-direction: column; width: 100%; margin-top: 30vh;">
+                    <h1 class="s3__headers" style="text-align: left; width: 130%">iPadOS and apps. Workflow workhorses.</h1>
+                    <div style="position: relative; width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-self: center; align-self: center; overflow: clip;">
+                        <video preload="auto" style="margin-bottom: auto; justify-self: center; position: relative; align-self: center; justify-self: center;" class="videos" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/pro-apps/large.mp4"></video>
+                    </div>
+                    <div style=" display: grid; grid-template-columns: auto auto; justify-content: evenly; gap: 8vw; width: 100%; align-self: center;">
+                        <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal;">iPad OS is designed to let you power through advanced workflows and <b style="color:white; font-weight: 600;">do all the things you love</b> with ease and simplicity. Run pro appls, play high-performance games, and take on creative projects of any size with an intuitive touch-first experience.</p>
+                        <div style=" display: flex; flex-direction: column; flex: 1">
+                            <p style="padding-bottom: 2vh; text-align: left; font-size: 0.97em;"><span style="color:white; font-weight: 600; font-size: 0.97em;">Shown above: </span>Stage Manager, Final Cut Pro for iPad, Procreate Dreams, Octane X, Logic Pro for iPad, Procreate, Freeform, Mortpholio Trace, Photos, Shapr3D</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder" style="margin-bottom: 5vh;">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Explore what you can do on iPad</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                    C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                    c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+
+                <div class="block" style="height:min-content; display: flex; flex-direction: column; width: 100%; margin-top: 30vh;">
+                    <h1 class="s3__headers" style="text-align: center;">Apple Pencil Pro. <br>Engineered for limitless creativity.</h1>
+                    <div style="position: relative; width: 100vw; height: auto; display: flex; flex-direction: column; justify-self: center; align-self: center; overflow: clip; margin-bottom: 10%;">
+                        <video preload="auto" style="margin-bottom: auto; justify-self: center; position: relative; align-self: center; justify-self: center;" class="videos" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/pencil-pro/large.mp4"></video>
+                    </div>
+                    <div style=" display: flex; width: 90%; align-self: center; flex-direction: column;">
+                        <p style="padding-bottom: 2vh; text-align: center; flex: 1; line-break: normal;">Apple Pencil sets the standard for how drawing, painting, handwriting, and note-taking should feel — intuitive, precise, and magical. All with pixel‑perfect precision, low latency, tilt sensitivity, and support for palm rejection. The <b style="color:white; font-weight: 600;">all-new Apple Pencil Pro</b> adds even more capabilities to bring your ideas to life like never before.</p>
+                        <p style="padding-bottom: 2vh; text-align: center; flex: 1; line-break: normal;"><a style="font-size: inherit; font-weight: 500; color:rgb(41, 134, 255)">Explore more Apple Pencil features ></a></p>
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder" style="margin-block: 5vh;">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Explore what you can do on iPad</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                    C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                    c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+                <div class="block" style="height:min-content; display: flex; flex-direction: column; width: 100%; margin-top: 30vh;">
+                    <h1 class="s3__headers" style="text-align: left;">Magic Keyboard.<br>Innovation is key.</h1>
+                    <div style=" display: flex; width: 90%; align-self: center; flex-direction: column;">
+                        <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal;">Magic Keyboard delivers an amazing typing and trackpad experience in a <b style="color:white; font-weight: 600;">sleek, portable new design</b> with an aluminum palm rest. The keyboard includes a function row and a larger glass trackpad with haptic feedback for precise work and Multi‑Touch gestures.</p>
+                        <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal;"><a style="font-size: inherit; font-weight: 500; color:rgb(41, 134, 255)">Learn more about keyboards for iPad ></a></p>
+                    </div>
+                    <div style="position: relative; width: 100vw; height: auto; display: flex; flex-direction: column; justify-self: center; align-self: center; overflow: clip; margin-bottom: 10%;">
+                        <video preload="auto" style="margin-bottom: auto; justify-self: center; position: relative; align-self: center; justify-self: center;" class="videos" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/magic-keyboard/large.mp4"></video>
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder" style="margin-block: 5vh;">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Tap into the new Magic Keyboard</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                    C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                    c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+                <div class="block" style="height:min-content; display: flex; flex-direction: column; width: 100%; margin-top: 30vh;">
+                    <div style=" display: flex; width: 100%; align-self: center; flex-direction: row; gap: 10%">
+                        <h1 class="s3__headers" style="text-align: left; padding-bottom: 5%;">Mics.<br>Cameras.<br>Action.</h1>
+                        <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal; align-self: center;"><b style="color:white; font-weight: 600;">Shoot, edit, and share all on one device</b> with a pro camera system with LiDAR Scanner, studio-quality mics, and four speakers. Capture 4K ProRes video, hop on a video call with the new landscape front camera, and take dramatically better document scans enhanced by AI.</p>
+                    </div>
+                    <div style="overflow: clip;position: relative; justify-content: right; width: 100vw; background-position: right; background-size: cover; height: 85vh; display: flex; justify-self: center; align-self: center; overflow: clip; margin-bottom: 10%; background-repeat: no-repeat; background-image: url(https://apple.com/v/ipad-pro/aq/images/overview/cameras/shoot_edit_share_hw__balaezj1ubeq_large.jpg); margin-right: 5%;">
+                        <video preload="auto" style="margin-bottom: auto; height: 102%; width: auto; padding-block:2%; margin-right: 1.5%; position: relative" class="videos" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/cameras-hero/large.mp4"></video>
+                    </div>
+                    <div style="display: flex; justify-content: center; width: max-content; justify-items: center; align-self: center;">
+                        <table style="width: 65%;">
+                            <tr>
+                                <td>
+                                    <div style="width: 100%; height: 5em">
+                                        <image style="width: 20%; height: 100%; float: left;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/cameras/ipadpro13_gen7_camera__i9tftpwpgaeu_large.png"></image>
+                                    </div>
+                                    <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal; align-self: center;"><b style="color:white; font-weight: 600;">12MP Wide Camera</b> with adaptive True Tone flash</p>
+                                </td>
+                                <td>
+                                    <div style="width: 100%; height: 5em">
+                                        <image style="width: 15%; height: 100%; float: left;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/cameras/ipad_front_camera_landscape__5f0z6qnm4duu_large.png"></image>
+                                    </div>
+                                    <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal; align-self: center;"><b style="color:white; font-weight: 600;">Landscape 12MP Ultra Wide camera</b> with support for Center Stage</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="width: 100%; height: 5em">
+                                        <image style="width: 20%; height: 100%; float: left;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/cameras/waveform__d358xw5dz926_large.png"></image>
+                                    </div>
+                                    <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal; align-self: center;"><b style="color:white; font-weight: 600;">Studio-quality mics</b> for great video calls.</p>
+                                </td>
+                                <td>
+                                    <div style="width: 100%; height: 5em">
+                                        <image style="width: 15%; height: 100%; float: left;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/cameras/speaker_wave_2__cwqultenqc6e_large.png"></image>
+                                    </div>
+                                    <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal; align-self: center;"><b style="color:white; font-weight: 600;">Four-speaker sound system</b> for rich audio.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder" style="margin-block: 5vh;">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Tap into the new Magic Keyboard</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                    C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                    c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+                <div class="block" style="height:min-content; display: flex; flex-direction: column; position: relative; width: 115%; margin-bottom: 8%;">
+                    <h1 class="s3__headers" style="text-align: left; margin-bottom: 5%;">Dream big.<br>Connect fast.</h1>
+                    <div style="position: relative; width: 100%; height: auto; display: flex; flex-direction: column; justify-self: center; align-self: center; margin-bottom: 10%; align-items: center;">
+                        <!-- <video preload="auto" style="margin-bottom: auto; justify-self: center; position: relative; align-self: center; justify-self: center;" class="videos" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/magic-keyboard/large.mp4"></video> -->
+                        <img style="height: auto; width: 120%" src="https://www.apple.com/v/ipad-pro/aq/images/overview/connectivity/external_display__brvese6ldr8i_large.jpg">
+                    </div>
+                    <div style=" display: grid; grid-template-columns: auto auto; justify-content: evenly; gap: 8vw; width: 100%; align-self: center;">
+                        <p style="padding-bottom: 2vh; text-align: left; flex: 1; line-break: normal;">Pro connectivity adds a whole new dimension of versatility to iPad Pro. <b style="color:white; font-weight: 600;">Drive high-resolution external displays</b> up to 6K and connect to storage devices with Thunderbolt. And stay connected wherever you are with blazing-fast Wi-Fi 6E and 5G capabilities.</p>
+                        <div style=" display: flex; flex-direction: column; flex: 1">
+                            <p style="padding-bottom: 2vh; text-align: left; padding-bottom: 0;">Up to <br><span style="color:white; font-weight: 600; font-size: 2em; line-height: 140%;">40Gb/s</span><br>data transfer speeds</p>
+                            <p style="padding-bottom: 2vh; text-align: left;"><br><span style="color:white; font-weight: 600; font-size: 2em; line-height: 140%;">Wifi 6E<br>5G</span><br></p>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="outer-controls-placeholder" style="margin-bottom: 5vh;">
+                    <div class="outer invisible">
+                        <div class="controls-container closed" style="display:grid-row; row-gap:unset; max-width: fit-content;">
+                            <h2>Stay connected like a pro</h2>
+                            <button type="submit" onclick="location.href='#'" class="info-button"><div><svg style="fill: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                                <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
+                                    C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
+                                    c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
+                            </svg></div></button>
+                        </div>
+                        <div class="blue-thing controls"></div></div>
+                    </div>
+    
+
+                <div style="height:100vh; width:auto; opacity:0; top:100vh;"></div>
+                
             </div>
         </section>
     </body>

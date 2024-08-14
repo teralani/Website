@@ -3,7 +3,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background-color:rgba(81, 81, 87, 0.75);
+    background-color:rgba(81, 81, 87, 0.60);
     backdrop-filter: blur(10px);
 
     /* animation: onOpen 0.5s cubic-bezier(.47,.23,.32,1.5), expand 1.3s ease-out 1.4s;
@@ -89,6 +89,12 @@
 
     animation: fade 0.5s cubic-bezier(.47,.23,.16,1.4);
     animation-fill-mode: both;
+}
+.dot-two-button-highlight.dot-seen {
+    animation-delay: calc(0.1s + 1.3s);
+}
+h2.dot-seen {
+    animation-delay: 1.8s;
 }
 .dot:nth-child(1) {
     animation-delay: calc(0.2s + 1.3s);
@@ -209,6 +215,7 @@
     align-items: center;
     justify-items: center;
     justify-content: center;
+    opacity: 0;
 }
 .dot-two-button-highlight.selected{
     /* transition: width 5s, height 5s, border radius 5s, opacity 5s; */
@@ -217,7 +224,7 @@
     height: 40px;
     border-radius: 40px;
 
-    opacity: 1 !important;
+    /* opacity: 1; */
 }
 .dot-two-button-highlight.selected > .dot-two-button {
     border: 2px rgba(81, 81, 87, 0.75) solid;
