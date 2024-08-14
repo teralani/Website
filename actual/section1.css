@@ -50,7 +50,7 @@
 #navbar {
     top: 0;
     width: 100%;
-    height: 4vh;
+    height: 5vh;
     background-color: rgb(0, 0, 0);
     z-index: 1000;
     position:relative;
@@ -81,7 +81,7 @@
 }
 #nav__wrapper {
     padding-inline: 20% 20%;
-    padding-top: 1vh;
+    padding-top: 1.5vh;
     justify-content: center;
     width:auto;
 }

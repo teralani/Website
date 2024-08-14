@@ -27,7 +27,7 @@
                 /* display:absolute; */
                 flex-direction: column;
                 overflow-x: clip;
-                background: rgb(249, 121, 121);
+                background: rgb(0, 0, 0);
                 margin:0;
                 max-width: 100vw;
                 z-index: -100;
@@ -65,6 +65,21 @@
             #sticky-navbar.seen{
                 top:0;
             }
+            footer {
+                padding-block: 3vh;
+                background-color: rgb(29, 29, 31);
+                height:fit-content;
+
+                #q{
+                    margin-inline: 25vw;
+                    font-size: 0.75em;
+                    color: rgba(255, 255, 255, 0.56);
+                }
+                hr {
+                    border: 0.2px solid rgba(255, 255, 255, 0.3);
+                    margin-inline: 25vw;
+                }
+            }
         </style>
     </head>
     <body onload="setUpVideo()">
@@ -86,7 +101,9 @@
                 <nav id="navbar">
                     <div id="nav__wrapper">
                         <ul class="nav-list">
-                            <li> LOGO </li>
+                            <li>
+                                <svg style="fill: white; margin-top: -1.5vh" height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"></path></svg>
+                            </li>
                             <li><a href="#"> Store </a></li>
                             <li><a href="#"> Mac </a></li>
                             <li><a href="#"> iPhone </a></li>
@@ -97,8 +114,14 @@
                             <li><a href="#"> Entertainment </a></li>
                             <li><a href="#"> Accessories </a></li>
                             <li><a href="#"> Support </a></li>
-                            <li> SCH </li>
-                            <li> BAG</li>
+                            <li>
+                                <svg style="fill: white; margin-top: -1.5vh" xmlns="http://www.w3.org/2000/svg" width="15px" height="44px" viewBox="0 0 15 44">
+                                    <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
+                                    </svg>
+                            </li>
+                            <li>
+                                <svg style="fill: white; margin-top: -1.5vh" height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path></svg>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -143,15 +166,58 @@
                     </div>
                 </div>  
                 <div class="slider" style="margin-bottom: 25vh;">
-                    <div class="slider__wrapper">
-                        <div class="slider__inner">
-                            <div class="slider__card">1</div>
-                            <div class="slider__card">2</div>
-                            <div class="slider__card">3</div>
-                            <div class="slider__card">4</div>
-                            <div class="slider__card">5</div>
-                            <div class="slider__card">6</div>
-                        </div>
+                    <div class="slider__wrapper" style="padding-inline: 23vw;">
+                            <div class="slider__card">
+                                <div>
+                                    <div>
+                                        <h3>All-new pro design. Incredibly portable. The thinnest Apple product ever.</h3>
+                                    </div>
+                                    <img style="left: -11%; position: relative;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/highlights/design__kk16tmcuw5me_large.jpg">
+                                </div>
+                            </div>
+                            <div class="slider__card">
+                                <div>
+                                    <div>
+                                        <h3>Ultra Retina XDR. The world’s most advanced display. Extreme brightness and precise contrast.</h3>
+                                    </div>
+                                    <img style="top: 20%; margin-left: -23%; position: absolute;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/highlights/display__bzsf7o4nhfiq_large.jpg">
+                                </div>
+                            </div>
+                            <div class="slider__card">
+                                <div>
+                                    <div style="margin-left: 39vw; width: 20vw;">
+                                        <h3>Introducing the Apple M4 chip. Outrageous performance, game-changing graphics, and powerful AI capabilities.</h3>
+                                    </div>
+                                    <img src="https://www.apple.com/v/ipad-pro/aq/images/overview/highlights/chip__fj2i2rsn8jee_large.jpg">
+                                </div>
+                            </div>
+                            <div class="slider__card">
+                                <div>
+                                    <div>
+                                        <h3>Crush pro workflows<br>with the ease of iPadOS<br>                                            and amazing apps.</h3>
+                                    </div>
+                                    <img style="margin-left: 40%; margin-top: 10%; position: relative;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/highlights/anim/ipados_startframe__d00lil3sqre6_large.jpg">
+                                    <img style="margin-left: -88%; margin-top: -5%; z-index: 1; position: relative;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/highlights/ipados_hw__eyfh2cbzt3o2_large.png">
+                                    
+                                </div>
+                            </div>
+                            <div class="slider__card">
+                                <div>
+                                    <div>
+                                        <h3>All-new Apple Pencil Pro.<br>New features for next-level creativity.</h3>
+                                    </div>
+                                    <img src="https://www.apple.com/v/ipad-pro/aq/images/overview/highlights/anim/pencil_startframe__cxllyf12knsm_large.jpg">
+                                </div>
+                            </div>
+                            <div class="slider__card">
+                                <div>
+                                    <div style="top: 58vh;">
+                                        <h3>Redesigned, thinner Magic Keyboard.
+                                            Comfortable typing and haptic trackpad experience.</h3>
+                                    </div>
+                                    <img style="margin-top: -13%;" src="https://www.apple.com/v/ipad-pro/aq/images/overview/highlights/keyboard__41pqaa0d5k2i_large.jpg">
+                                </div>
+                            </div>
                     </div>
                    
                     <div class="outer-controls-placeholder">
@@ -173,18 +239,18 @@
                     </div>
                 </div>
                 <div class="slider" style="padding-bottom: 4vh;">
-                    <div class="slider__wrapper">
+                    <div class="slider__wrapper" style="border-radius: 10%;">
                         <div class="slider__inner two-button-slider__inner">
-                            <div class="slider__card" style="max-width: 25vw; height: 55vh">
+                            <div class="slider__card" style="max-width: 25vw; height: 55vh; border-radius: 10%;">
                                 <div style="width: 100%; height:100%">
                                     <img class="grey" style="height:inherit; width:auto; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
-                                    <img style="height:inherit; width:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
+                                    <img style="height:inherit; width:auto; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1A__cxvssgdj2v6u_large_2x.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="slider__card" style="max-width: 25vw; height: 55vh">
+                            <div class="slider__card" style="max-width: 25vw; height: 55vh; border-radius: 10%;">
                                 <div style="width: 100%; height:100%">
                                     <img class="grey" style="height:inherit; width:auto; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/space-black/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
-                                    <img style="height:inherit; width:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
+                                    <img style="height:inherit; width:auto; display:auto" src="https://www.apple.com/v/ipad-pro/aq/images/overview/closer-look/silver/slide_1B__dgpmmatbtrwy_large_2x.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -223,8 +289,10 @@
                     <h1 class="s3__headers">Thrill. Sleeker.</h1>
                     <p style="padding-bottom: 2vh;">The all-new iPad Pro packs astonishing power into an unbelievably thin, light, and portable design. Push the limits of what’s possible on iPad with a superportable 11-inch model and an expansive 13-inch model that is <b style="color:white; font-weight: 600;"> the thinnest product Apple has ever created</b>.</p>
                     <div style="position: relative; width: 100%; height: min(110vh, 1406px); display: flex; flex-direction: column; justify-content: center;">
-                        <h1 style="color:white; font-size:3rem; position: absolute; margin-left:55%; top: 30vh; z-index: 0 !important; font-weight: 500;">5.1 mm</h1>
-                        <p style="position: absolute; left: 17.5vw; top: 40vh; z-index: 0 !important; ">thin and light design</p>
+                        <div style="position: absolute; z-index: 0 !important; top: 25%; left: 52%">
+                            <h1 style="color:white; font-size:3rem; position: relative;font-weight: 500; margin-bottom: 0%;">5.1 mm</h1>
+                            <p style="position: relative; ">thin and light design</p>
+                        </div>
                         <video preload="auto" style="margin-bottom: auto;" class="videos" id="thin-video" inline autoplay muted src="https://www.apple.com/105/media/us/ipad-pro/2024/97d7edf3-aac0-443d-9731-38d40ff50951/anim/design-hero/large_2x.webm"></video>
                     </div>
                 </div>
@@ -512,9 +580,16 @@
                     </div>
     
 
-                <div style="height:100vh; width:auto; opacity:0; top:100vh;"></div>
+                <div style="height:25vh; width:auto; opacity:0; top:100vh;"></div>
                 
             </div>
         </section>
     </body>
+    <footer>
+        <div id="q">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quisquam minima excepturi fugit voluptatem dolores, sit delectus provident laborum fugiat cum! Consequatur fuga unde fugiat soluta reiciendis fugit qui incidunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea quae perspiciatis repellat blanditiis incidunt eum dolore minima, saepe amet, tempore culpa autem quibusdam minus suscipit totam aliquam pariatur assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet odit molestias, laborum pariatur ullam maxime nobis explicabo similique amet quas voluptate cum tempora mollitia nemo? Harum at delectus eius quia? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, perferendis, molestias optio sapiente similique sequi autem unde, enim possimus incidunt voluptate minima accusantium dolores a eos quod inventore libero? Dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, nemo nostrum ipsum commodi pariatur sapiente voluptates placeat necessitatibus perspiciatis? Optio placeat inventore ipsam accusantium itaque dicta cumque dolor consectetur ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odit minus molestiae autem consectetur suscipit aliquam veritatis. Non cum aliquam culpa neque dignissimos, nostrum omnis quos dolorem ipsam sunt alias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maxime dicta, amet laborum architecto quibusdam, impedit incidunt minus eligendi non ipsam eius praesentium pariatur inventore natus harum dolorum dolorem corrupti. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum ut, id at voluptates unde velit nihil, quibusdam dicta ratione ducimus dolor necessitatibus, sapiente alias? Non architecto veritatis provident reiciendis tempora! <br><br>
+        </div>
+        <hr>
+        <div></div>
+    </footer>
 </html>
